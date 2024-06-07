@@ -5,6 +5,21 @@ date: "07-06-2024"
 output: html_document
 ---
 
+```{r}
+library(ggplot2)
+library(jsonlite)
+
+# A named vector example
+named_vector <- c(first = 1, second = 2, third = 3)
+
+# Convert the named vector to a named list
+named_list <- as.list(named_vector)
+
+# Then use toJSON without 'keep_vec_names'
+json_output <- toJSON(named_list)
+```
+
+
 # 1. (3p) Data
 
 Please find your original dataset or datasets; and describe your data in the first step.
@@ -17,7 +32,7 @@ data <- read.csv("data.csv")
 head(data)
 ```
 
-# Describe your data here...
+The dataset outlines information on IT professionals in Turkey, detailing their work type, job position, experience, and technical expertise. Each entry includes the individual's gender, city of residence, company size they work within, along with their level, tech stack, and salary details in Turkish Lira. Salary ranges are associated with raise periods, possibly indicating bi-annual or annual increments. The data exemplifies the diversity of the IT workforce across various regions and company sizes, revealing prevalent tech stacks among different roles.
 
 # 2. (3p) Exploratory and descriptive data analysis
 
@@ -25,9 +40,15 @@ Use "Exploratory and descriptive data analysis". Talk about your categorical and
 quantitative data or your ordinal variables etc. Write down your comments. (3-4 sentences)
 
 ```{r}
-# Perform exploratory data analysis here...
+str(data)
 ```
-# Your comments...
+
+In exploratory and descriptive data analysis, we focus on summarizing the main characteristics of the dataset, often using visual tools and statistical summaries. For categorical data such as work type, job position, and city of residence, we can use frequency tables, bar charts, and pie charts to understand the distribution and prevalence of each category. For quantitative data like experience and salary, we utilize histograms, box plots, and summary statistics (mean, median, mode, range, interquartile range) to capture the central tendency and dispersion. Ordinal variables such as company size and level might be analyzed using ordered bar charts and median measures to respect the inherent order of the categories while assessing the central trend.
+
+```{r}
+any(is.na(data))
+```
+Comment: The dataset doesn’t contain any missing values.
 
 # 3. (4p) Data Visualization
 
@@ -36,13 +57,27 @@ you understand your data further (distribution, outliers, variability, etc). And
 another 2 visualizations to compare two groups (like female/male; smoker/non-smoker etc).
 For each visualization, write down your comments. (2-3 sentences each)
 
-```{r, fig.cap="Visualization 1"}
-# First visualization code
-```
-# Comments for Visualization 1...
+```{r}
+# Suppose you have a named vector
+named_vector <- c(a = 1, b = 2, c = 3)
 
-```{r, fig.cap="Visualization 2"}
-# Second visualization code
+# Convert it to a named list
+named_list <- as.list(named_vector)
+
+# Now you can convert it to JSON
+json <- jsonlite::toJSON(named_list)
+
+# Print the JSON
+cat(json)
+
+# Visualization 1
+ggplot(data = data, aes(x = experience)) +
+    geom_histogram(fill = "blue", color = "black", binwidth = 1)
+```
+Comment: The first visualization is a histogram of the variable "experience", showing the distribution of experience levels among IT professionals in Turkey. The histogram is colored in blue and has a binwidth of 5, providing an overview of the frequency of different experience levels.
+
+```{r}
+# Visualization 2
 ```
 # Comments for Visualization 2...
 
