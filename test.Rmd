@@ -1,0 +1,231 @@
+---
+title: "Statical Computing Final Project"
+author: "Hatice Nurel - Melise Kaya"
+date: "07-06-2024"
+output: html_document
+---
+
+# 1. (3p) Data
+
+Please find your original dataset or datasets; and describe your data in the first step.
+(3-5 sentences)
+
+```{r}
+# Load dataset and print the first few rows
+# Assuming 'data.csv' is the file name of your dataset
+data <- read.csv("data.csv")
+head(data)
+```
+
+# Describe your data here...
+
+# 2. (3p) Exploratory and descriptive data analysis
+
+Use "Exploratory and descriptive data analysis". Talk about your categorical and
+quantitative data or your ordinal variables etc. Write down your comments. (3-4 sentences)
+
+```{r}
+# Perform exploratory data analysis here...
+```
+# Your comments...
+
+# 3. (4p) Data Visualization
+
+Use 2 useful, meaningful and different "data visualization techniques" which will help
+you understand your data further (distribution, outliers, variability, etc). And use
+another 2 visualizations to compare two groups (like female/male; smoker/non-smoker etc).
+For each visualization, write down your comments. (2-3 sentences each)
+
+```{r, fig.cap="Visualization 1"}
+# First visualization code
+```
+# Comments for Visualization 1...
+
+```{r, fig.cap="Visualization 2"}
+# Second visualization code
+```
+# Comments for Visualization 2...
+
+# 4. (4p) Confidence Intervals
+
+Build '2 Confidence Intervals' step by step: a) Calculate the mean, then b) standard error,
+and then c) the CI. Make "clear comments" about your findings in a, b and c.
+
+```{r}
+# Confidence Interval calculation code...
+```
+# Your clear comments...
+
+# 5. (4p) Transformation
+
+Implement one transformation (log transformation, Box-Cox transformation, etc) for
+one of your quantitative variables, which is not normally distributed; but will be
+normal or more normal, after the transformation. Comment about your trial (3-4 sentences)
+
+```{r}
+# Transformation code...
+```
+# Your comments...
+
+# 6. (2p every item if not indicated) t-test (Welch t-test or Wilcoxon rank-sum test or Paired t-test)
+
+Implement a single t-test for one of your "normally or not-normally distributed" variable:
+
+## a. Aim
+In words, what is your objective here? (1-2 sentences)
+
+# Your aim...
+
+## b. Hypothesis and level of significance
+Write your hypothesis in scientific form and determine the level of significance.
+
+```{r}
+# Hypothesis formulation...
+```
+
+## c. Which test you choose
+Is your data independent or dependent? (1 sentence)
+Tell why you chose this test. (1 sentence)
+
+# Answer c...
+
+## d. Assumption Check:
+Check the required assumptions statistically and "comment (1 sentence) for each of them is a must!".
+
+```{r}
+# Assumption check code...
+```
+
+# Comments on assumption checks...
+
+## e. Result
+Give the output of the test and then write down the result (ex: since p value is less /greater
+than alpha, I reject/not reject the null hypothesis). (2-3 sentences)
+
+```{r}
+# t-test code...
+```
+# Your result comment...
+
+## f. Conclusion (4p)
+You got your result in item e. Write down the conclusion of your result, in such a way that,
+the reader who doesn’t know any statistics can understand your findings. (1-2 sentences)
+
+# Your conclusion...
+
+## g. What can be Type-1 and Type-2 error here? Not definition! Tell these situations in terms of your data. (4p) (2-3 sentences)
+
+# Explanation of Type-1 and Type-2 errors...
+
+# 7. (2p every item if not indicated) ANOVA and Tukey Test
+
+## a. Aim (4p)
+In words, what is your objective here? (1-2 sentences)
+
+# Your aim...
+
+## b. Hypothesis and level of significance
+Choose more than 2 (≥3) groups to compare! (1 sentence)
+Write your hypothesis in scientific form and determine the level of significance.
+
+```{r}
+# Hypothesis formulation...
+```
+
+## c. Assumption Check
+Check the required assumptions statistically. "comment (1 sentence) on each of them is a must!".
+
+```{r}
+# Assumption check code...
+```
+
+# Comments on assumption checks...
+
+## d. Result of ANOVA
+Give the output of the test and then write down the result (ex:since p value is less than alpha,
+I reject the null hypothesis) (1-2 sentences)
+
+```{r}
+# ANOVA test code...
+```
+# Your result comment...
+
+## e. Conclusion of ANOVA (4p)
+You got your result in item d. Write down the conclusion of your result, in such a way that,
+the reader who doesn’t know any statistics can understand your findings. (1-2 sentences)
+
+# Your conclusion...
+
+## f. Result of Tukey
+Give the output of the test and write down the result (ex: since p value is less /greater than alpha,
+I reject/not reject the null hypothesis) (1-2 sentences)
+
+```{r}
+# Tukey test code...
+```
+
+# Your result comment...
+
+## g. Conclusion of Tukey (4p)
+You got your result in item f. Write down the conclusion of your result, in such a way that, the
+reader who doesn’t know any statistics can understand your findings. (2-3 sentences)
+
+# Your conclusion...
+
+# 8. (2p every item) Multiple Linear Regression
+
+## a. Aim (4p)
+In words, what is your objective here? Not definition, talk about your own aim/problem. (2-3 sentences)
+
+# Your aim...
+
+## b. Variable Selection
+Multiple linear regression (MLR) is a statistical technique that uses several explanatory variables to predict the outcome of a response variable. Which ones are your explanatory variables and which one is your response variable? (2-3 sentences)
+
+# Variables selection explanation...
+
+## c. Regression Equation
+Write down the "statistical/mathematical equation" of your regression function using those variables and the parameters.
+
+# Your regression equation...
+
+## d. Hypothesis and level of significance (4p)
+Write your hypothesis in scientific form and determine the level of significance.
+
+```{r}
+# Hypothesis formulation...
+```
+
+## e. Find the Best Model
+Use step function and find the best model, describe the reason which makes it the best one.
+
+```{r}
+# Model selection code...
+```
+
+# Explanation of the best model...
+
+## f. Assumption Check (4p)
+Check the required assumptions statistically, "comment (1 sentence) on each of them is a must!".
+
+```{r}
+# Assumption check code...
+```
+
+# Comments on assumption checks...
+
+## g. Result
+Give the output of the best model and write down the result. (2-3 sentences)
+
+```{r}
+# Model result code...
+```
+
+# Your result comment...
+
+## h. Conclusion (4p)
+You got your result in item f. Write down the conclusion of your result, in such a way that, the reader who doesn’t know any statistics can understand your findings. (2-3 sentences)
+
+# Your conclusion...
+```
+Please note that you need to replace placeholder texts with your actual content, formulas, hypotheses, and R code where appropriate. The above format assumes you've installed R and required packages for your analysis.
