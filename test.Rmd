@@ -288,23 +288,6 @@ Variables selection explanation here...
 
 ```{r}
 # Variable selection code...
-
-# Assuming 'data' is your dataframe
-# Select the explanatory variables and the response variable
-model_data <- data %>% select(experience, company_size, position, salary)
-
-# Check for missing values
-sum(is.na(model_data))
-
-# Remove rows with missing values
-model_data <- na.omit(model_data)
-
-# Check the structure of the model data
-str(model_data)
-
-# Fit the multiple linear regression model
-model <- lm(salary ~ experience + company_size + tech_stack, data = model_data)
-summary(model)
 ```
 
 ## c. Regression Equation
