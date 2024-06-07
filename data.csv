@@ -1,9 +1,301 @@
-ID,Name,Age,Country
-1,John Doe,28,USA
-2,Jane Smith,32,Canada
-3,Emily Jones,24,UK
-4,Michael Brown,35,Australia
-5,Linda White,30,Ireland
-6,David Wilson,41,USA
-7,Sarah Taylor,27,Canada
-8,Kevin Anderson,29,New Zealand
+gender,city,work_type,company_size,position,level,experience,tech_stack,currency,raise_period,salary
+Erkek,Ankara,Hibrit (Ofis + Remote),101 - 249 Kişi,Full Stack Developer,Senior,3 - 5 Yıl,.Net;JavaScript | Html | Css;React,₺ - Türk Lirası,2,72.000 - 72.999
+Erkek,Samsun,Remote,250+,Back-end Developer,Junior,1 - 3 Yıl,.Net,₺ - Türk Lirası,2,74.000 - 74.999
+Erkek,İstanbul,Remote,1 - 5 Kişi,Software Architect,Senior,15 Yıl ve üzeri,.Net;JavaScript | Html | Css;Vue,₺ - Türk Lirası,1,125.000 - 129.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),21 - 50 Kişi,Product Manager,Senior,15 Yıl ve üzeri,.Net,₺ - Türk Lirası,2,90.000 - 94.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Mobile Application Developer (Full Stack),Junior,1 - 3 Yıl,React Native,₺ - Türk Lirası,1,33.000 - 33.999
+Erkek,İzmir,Remote,250+,Software Development Manager / Engineering Manager,Senior,10 - 12 Yıl,Swift;Objective C,₺ - Türk Lirası,1,160.000 - 164.999
+Erkek,Ankara,Hibrit (Ofis + Remote),21 - 50 Kişi,Back-end Developer,Junior,1 - 3 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,2,41.000 - 41.999
+Erkek,Karabük,Remote,101 - 249 Kişi,Front-end Developer,Junior,1 - 3 Yıl,JavaScript | Html | Css;Vue,₺ - Türk Lirası,3,31.000 - 31.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),101 - 249 Kişi,CTO,Senior,15 Yıl ve üzeri,.Net;Python;Kotlin;Swift;JavaScript | Html | Css,₺ - Türk Lirası,2,170.000 - 174.999
+Erkek,Kahramanmaraş,Hibrit (Ofis + Remote),250+,SAP/ABAP Developer & Consultant,Senior,3 - 5 Yıl,ABAP,₺ - Türk Lirası,1,75.000 - 79.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),1 - 5 Kişi,Full Stack Developer,Middle,3 - 5 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,1,37.000 - 37.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),250+,Front-end Developer,Middle,3 - 5 Yıl,JavaScript | Html | Css;Angular,₺ - Türk Lirası,2,55.000 - 55.999
+Erkek,Kocaeli,Hibrit (Ofis + Remote),250+,Front-end Developer,Junior,0 - 1 Yıl,JavaScript | Html | Css;React,₺ - Türk Lirası,2,30.000 - 30.999
+Erkek,İzmir,Hibrit (Ofis + Remote),21 - 50 Kişi,Full Stack Developer,Junior,1 - 3 Yıl,.Net;Angular,₺ - Türk Lirası,2,40.000 - 40.999
+Erkek,Kayseri,Remote,21 - 50 Kişi,Back-end Developer,Senior,3 - 5 Yıl,Java,₺ - Türk Lirası,1,55.000 - 55.999
+Erkek,İstanbul,Remote,250+,Software Architect,Senior,15 Yıl ve üzeri,.Net,₺ - Türk Lirası,1,73.000 - 73.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),250+,Full Stack Developer,Senior,7 - 10 Yıl,.Net;React,₺ - Türk Lirası,1,145.000 - 149.999
+Erkek,Ankara,Hibrit (Ofis + Remote),250+,Back-end Developer,Junior,1 - 3 Yıl,Python,₺ - Türk Lirası,3,55.000 - 55.999
+Erkek,Kocaeli,Hibrit (Ofis + Remote),250+,Full Stack Developer,Middle,1 - 3 Yıl,Java;Go;React,₺ - Türk Lirası,2,85.000 - 89.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Embedded Software Developer,Senior,12 - 14 Yıl,C / C++,₺ - Türk Lirası,2,95.000 - 99.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Front-end Developer,Middle,3 - 5 Yıl,JavaScript | Html | Css;Angular,₺ - Türk Lirası,2,95.000 - 99.999
+Erkek,İstanbul,Remote,250+,Full Stack Developer,Middle,1 - 3 Yıl,Java;Python;JavaScript | Html | Css;React,₺ - Türk Lirası,1,60.000 - 60.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Back-end Developer,Junior,1 - 3 Yıl,.Net,₺ - Türk Lirası,2,45.000 - 45.999
+Erkek,Bursa,Hibrit (Ofis + Remote),250+,Full Stack Developer,Middle,1 - 3 Yıl,.Net;Angular,₺ - Türk Lirası,1,40.000 - 40.999
+Kadın,Ankara,Ofis,250+,Front-end Developer,Middle,5 - 7 Yıl,React,₺ - Türk Lirası,2,56.000 - 56.999
+Erkek,İstanbul,Ofis,21 - 50 Kişi,Full Stack Developer,Senior,10 - 12 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,1,59.000 - 59.999
+Erkek,Ankara,Hibrit (Ofis + Remote),21 - 50 Kişi,Full Stack Developer,Middle,1 - 3 Yıl,NodeJS;React,₺ - Türk Lirası,2,50.000 - 50.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),51 - 100 Kişi,CTO,Senior,15 Yıl ve üzeri,Java;Php,₺ - Türk Lirası,2,200.000+
+Erkek,Ankara,Ofis,6 - 10 Kişi,Embedded Software Developer,Junior,0 - 1 Yıl,C / C++,₺ - Türk Lirası,1,50.000 - 50.999
+Erkek,Ankara,Remote,250+,Full Stack Developer,Senior,7 - 10 Yıl,NodeJS;Python;Kotlin;JavaScript | Html | Css;React,₺ - Türk Lirası,1,105.000 - 109.999
+Erkek,Ankara,Remote,250+,Software Development Manager / Engineering Manager,Senior,12 - 14 Yıl,Java,₺ - Türk Lirası,2,140.000 - 144.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Data Engineer,Senior,5 - 7 Yıl,Oracle,₺ - Türk Lirası,2,72.000 - 72.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),21 - 50 Kişi,Front-end Developer,Senior,5 - 7 Yıl,JavaScript | Html | Css;React,₺ - Türk Lirası,2,85.000 - 89.999
+Erkek,İstanbul,Remote,250+,Full Stack Developer,Middle,5 - 7 Yıl,Java;JavaScript | Html | Css,₺ - Türk Lirası,2,120.000 - 124.999
+Erkek,* Hollanda,Ofis,250+,Embedded Software Developer,Middle,3 - 5 Yıl,C / C++;Logicad,€ - Euro,1,4.000 - 4.999
+Erkek,İstanbul,Remote,250+,Full Stack Developer,Middle,1 - 3 Yıl,Java;Swift;Objective C,₺ - Türk Lirası,1,49.000 - 49.999
+Erkek,Çorum,Ofis,11 - 20 Kişi,Front-end Developer,Middle,3 - 5 Yıl,NodeJS;JavaScript | Html | Css;React,₺ - Türk Lirası,2,32.000 - 32.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Full Stack Developer,Middle,1 - 3 Yıl,.Net;JavaScript | Html | Css;React,₺ - Türk Lirası,1,47.000 - 47.999
+Erkek,Ankara,Remote,51 - 100 Kişi,QA / Manuel Test,Middle,1 - 3 Yıl,JavaScript | Html | Css,₺ - Türk Lirası,2,40.000 - 40.999
+Erkek,Kayseri,Remote,1 - 5 Kişi,SAP/ABAP Developer & Consultant,Junior,0 - 1 Yıl,Sap,₺ - Türk Lirası,2,20.000 - 20.999
+Erkek,İstanbul,Remote,250+,Software Architect,Senior,10 - 12 Yıl,Java,₺ - Türk Lirası,2,130.000 - 134.999
+Kadın,Ankara,Hibrit (Ofis + Remote),250+,Back-end Developer,Junior,0 - 1 Yıl,Java,₺ - Türk Lirası,2,29.000 - 29.999
+Erkek,İzmir,Hibrit (Ofis + Remote),11 - 20 Kişi,Full Stack Developer,Junior,1 - 3 Yıl,Java;.Net;C / C++;JavaScript | Html | Css,₺ - Türk Lirası,2,21.000 - 21.999
+Erkek,Bursa,Ofis,250+,Full Stack Developer,Middle,1 - 3 Yıl,Python;React;Vue;Flutter,₺ - Türk Lirası,1,22.000 - 22.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Senior,5 - 7 Yıl,.Net,₺ - Türk Lirası,2,80.000 - 84.999
+Erkek,İstanbul,Ofis,250+,Embedded Software Developer,Middle,1 - 3 Yıl,Python;C / C++,₺ - Türk Lirası,2,50.000 - 50.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Product Owner,Middle,1 - 3 Yıl,nope,₺ - Türk Lirası,2,33.000 - 33.999
+Erkek,Bursa,Remote,6 - 10 Kişi,Full Stack Developer,Junior,0 - 1 Yıl,.Net;NodeJS;Angular;React Native,₺ - Türk Lirası,2,27.000 - 27.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),6 - 10 Kişi,Project Manager,Middle,3 - 5 Yıl,PM olarak PM tool'ları,₺ - Türk Lirası,1,55.000 - 55.999
+Erkek,Mersin,Remote,101 - 249 Kişi,Back-end Developer,Senior,1 - 3 Yıl,.Net;Ruby,₺ - Türk Lirası,1,55.000 - 55.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Senior,5 - 7 Yıl,Java,₺ - Türk Lirası,1,85.000 - 89.999
+Erkek,Adana,Hibrit (Ofis + Remote),250+,Front-end Developer,Middle,3 - 5 Yıl,React,₺ - Türk Lirası,2,95.000 - 99.999
+Erkek,Ankara,Remote,21 - 50 Kişi,Back-end Developer,Middle,3 - 5 Yıl,.Net;Ruby,$ - Dolar,1,2.000 - 2.999
+Erkek,İzmir,Remote,250+,Full Stack Developer,Senior,5 - 7 Yıl,NodeJS;Python;JavaScript | Html | Css,₺ - Türk Lirası,1,70.000 - 70.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),250+,Data Scientist,Middle,1 - 3 Yıl,Python;JavaScript | Html | Css,$ - Dolar,1,1.000 - 1.999
+Erkek,Trabzon,Ofis,51 - 100 Kişi,Full Stack Developer,Senior,15 Yıl ve üzeri,Java,₺ - Türk Lirası,1,69.000 - 69.999
+Erkek,İzmir,Hibrit (Ofis + Remote),1 - 5 Kişi,Full Stack Developer,Senior,12 - 14 Yıl,Php;NodeJS;Go;JavaScript | Html | Css;React;Vue,€ - Euro,1,6.000 - 6.999
+Erkek,İstanbul,Ofis,21 - 50 Kişi,Software Architect,Senior,15 Yıl ve üzeri,NodeJS;Go;JavaScript | Html | Css;React,₺ - Türk Lirası,1,95.000 - 99.999
+Erkek,İstanbul,Remote,101 - 249 Kişi,Full Stack Developer,Senior,12 - 14 Yıl,NodeJS;React,₺ - Türk Lirası,2,95.000 - 99.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Senior,10 - 12 Yıl,.Net,₺ - Türk Lirası,2,90.000 - 94.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,QA / Automation,Middle,1 - 3 Yıl,Java,₺ - Türk Lirası,2,60.000 - 60.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),101 - 249 Kişi,Product Owner,Senior,15 Yıl ve üzeri,Php,₺ - Türk Lirası,2,69.000 - 69.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),21 - 50 Kişi,Data Scientist,Junior,0 - 1 Yıl,.Net;Python;JavaScript | Html | Css;Odi Oracle ,₺ - Türk Lirası,4,27.000 - 27.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),51 - 100 Kişi,Embedded Software Developer,Middle,5 - 7 Yıl,Python;C / C++,₺ - Türk Lirası,1,58.000 - 58.999
+Erkek,Ankara,Remote,250+,Back-end Developer,Senior,5 - 7 Yıl,Java;Kotlin,₺ - Türk Lirası,1,110.000 - 114.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Full Stack Developer,Senior,7 - 10 Yıl,Java,₺ - Türk Lirası,2,68.000 - 68.999
+Erkek,Ankara,Remote,250+,Full Stack Developer,Senior,7 - 10 Yıl,Java;.Net;NodeJS;JavaScript | Html | Css;Angular;Cobol,₺ - Türk Lirası,1,90.000 - 94.999
+Erkek,İstanbul,Remote,11 - 20 Kişi,Back-end Developer,Junior,1 - 3 Yıl,Java;.Net;Python,₺ - Türk Lirası,3,38.000 - 38.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),11 - 20 Kişi,Full Stack Developer,Senior,7 - 10 Yıl,Java;Flutter,₺ - Türk Lirası,1,75.000 - 79.999
+Erkek,İstanbul,Remote,51 - 100 Kişi,Back-end Developer,Middle,3 - 5 Yıl,NodeJS;JavaScript | Html | Css;Vue,₺ - Türk Lirası,2,85.000 - 89.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Mobile Application Developer (iOS),Senior,7 - 10 Yıl,Swift;swiftui,₺ - Türk Lirası,2,110.000 - 114.999
+Erkek,İzmir,Remote,250+,Full Stack Developer,Junior,1 - 3 Yıl,.Net;NodeJS;Python;JavaScript | Html | Css;React;Vue,₺ - Türk Lirası,1,38.000 - 38.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Bussines Intelligence,Middle,1 - 3 Yıl,"SQL,powerbı,tabular",₺ - Türk Lirası,1,74.000 - 74.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Full Stack Developer,Senior,7 - 10 Yıl,Php;NodeJS;Angular;MS SQL,₺ - Türk Lirası,2,100.000 - 104.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),6 - 10 Kişi,Back-end Developer,Middle,3 - 5 Yıl,.Net;Python;C / C++,₺ - Türk Lirası,2,80.000 - 84.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Front-end Developer,Senior,5 - 7 Yıl,JavaScript | Html | Css;React;Angular,₺ - Türk Lirası,2,75.000 - 79.999
+Erkek,Aydın,Remote,250+,Team / Tech Lead,Middle,3 - 5 Yıl,Python,₺ - Türk Lirası,2,53.000 - 53.999
+Erkek,Konya,Ofis,11 - 20 Kişi,Full Stack Developer,Senior,1 - 3 Yıl,Java;Php;JavaScript | Html | Css;Vue,₺ - Türk Lirası,2,48.000 - 48.999
+Kadın,İzmir,Hibrit (Ofis + Remote),51 - 100 Kişi,QA / Automation,Senior,10 - 12 Yıl,Java;JavaScript | Html | Css,€ - Euro,1,1.000 - 1.999
+Erkek,Ankara,Hibrit (Ofis + Remote),250+,Front-end Developer,Middle,5 - 7 Yıl,NodeJS;JavaScript | Html | Css;Vue,₺ - Türk Lirası,2,66.000 - 66.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Back-end Developer,Junior,0 - 1 Yıl,Java,₺ - Türk Lirası,1,37.000 - 37.999
+Erkek,Ankara,Remote,51 - 100 Kişi,Front-end Developer,Senior,5 - 7 Yıl,React,₺ - Türk Lirası,2,90.000 - 94.999
+Kadın,Antalya,Remote,250+,Back-end Developer,Junior,0 - 1 Yıl,.Net,₺ - Türk Lirası,2,35.000 - 35.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),1 - 5 Kişi,Back-end Developer,Senior,10 - 12 Yıl,Plsql&java,₺ - Türk Lirası,1,85.000 - 89.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Software Development Manager / Engineering Manager,Senior,10 - 12 Yıl,Python,₺ - Türk Lirası,1,145.000 - 149.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Front-end Developer,Middle,3 - 5 Yıl,Vue,$ - Dolar,1,2.000 - 2.999
+Erkek,İzmir,Remote,250+,Back-end Developer,Senior,10 - 12 Yıl,NodeJS;Python;JavaScript | Html | Css;React,$ - Dolar,1,4.000 - 4.999
+Erkek,İstanbul,Remote,51 - 100 Kişi,Game Developer,Senior,5 - 7 Yıl,Unity,₺ - Türk Lirası,2,160.000 - 164.999
+Erkek,Ankara,Hibrit (Ofis + Remote),51 - 100 Kişi,Full Stack Developer,Junior,1 - 3 Yıl,Java;JavaScript | Html | Css,₺ - Türk Lirası,2,32.000 - 32.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),11 - 20 Kişi,Back-end Developer,Middle,1 - 3 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,2,39.000 - 39.999
+Erkek,İstanbul,Remote,250+,Front-end Developer,Senior,15 Yıl ve üzeri,NodeJS;JavaScript | Html | Css;React;Vue;React Native,₺ - Türk Lirası,2,150.000 - 154.999
+Erkek,İzmir,Hibrit (Ofis + Remote),250+,Product Manager,Senior,3 - 5 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,2,80.000 - 84.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Mobile Application Developer (Android),Senior,5 - 7 Yıl,Java;Kotlin,₺ - Türk Lirası,2,72.000 - 72.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),21 - 50 Kişi,Back-end Developer,Middle,3 - 5 Yıl,.Net,₺ - Türk Lirası,2,45.000 - 45.999
+Kadın,İstanbul,Ofis,250+,Business analyst,Junior,0 - 1 Yıl,Jira ,₺ - Türk Lirası,1,23.000 - 23.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),101 - 249 Kişi,Full Stack Developer,Junior,1 - 3 Yıl,.Net,₺ - Türk Lirası,2,55.000 - 55.999
+Erkek,Kocaeli,Ofis,250+,QA / Automation,Junior,0 - 1 Yıl,C / C++,₺ - Türk Lirası,2,60.000 - 60.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Front-end Developer,Junior,1 - 3 Yıl,JavaScript | Html | Css;Vue,₺ - Türk Lirası,2,40.000 - 40.999
+Erkek,Ankara,Ofis,250+,Full Stack Developer,Junior,1 - 3 Yıl,.Net,₺ - Türk Lirası,2,59.000 - 59.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Back-end Developer,Junior,1 - 3 Yıl,Php,€ - Euro,1,1.000 - 1.999
+Erkek,Bursa,Ofis,6 - 10 Kişi,Back-end Developer,Middle,3 - 5 Yıl,.Net,₺ - Türk Lirası,1,37.000 - 37.999
+Erkek,* Estonya,Ofis,250+,Mobile Application Developer (Full Stack),Senior,5 - 7 Yıl,Java;Kotlin;Flutter,€ - Euro,1,3.000 - 3.999
+Erkek,* İrlanda,Hibrit (Ofis + Remote),250+,Director of Software Development,Senior,15 Yıl ve üzeri,Java;Python;Ruby;C / C++;Rust,€ - Euro,1,18.000 - 18.999
+Kadın,İstanbul,Remote,250+,AI Engineer,Middle,3 - 5 Yıl,Python,₺ - Türk Lirası,2,75.000 - 79.999
+Erkek,* ABD,Remote,250+,Back-end Developer,Junior,1 - 3 Yıl,Java;.Net;NodeJS;React,$ - Dolar,1,1.000 - 1.999
+Erkek,Ankara,Hibrit (Ofis + Remote),51 - 100 Kişi,Back-end Developer,Senior,5 - 7 Yıl,Java,₺ - Türk Lirası,1,90.000 - 94.999
+Erkek,İstanbul,Ofis,6 - 10 Kişi,Full Stack Developer,Middle,1 - 3 Yıl,.Net;Python;C / C++,₺ - Türk Lirası,2,35.000 - 35.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Full Stack Developer,Senior,7 - 10 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,2,60.000 - 60.999
+Erkek,Ankara,Ofis,250+,Full Stack Developer,Middle,5 - 7 Yıl,.Net,₺ - Türk Lirası,1,31.000 - 31.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),250+,Back-end Developer,Middle,3 - 5 Yıl,Java,₺ - Türk Lirası,2,75.000 - 79.999
+Erkek,İzmir,Hibrit (Ofis + Remote),250+,Back-end Developer,Junior,1 - 3 Yıl,NodeJS,₺ - Türk Lirası,2,30.000 - 30.999
+Erkek,İstanbul,Ofis,11 - 20 Kişi,DevOps Engineer,Middle,7 - 10 Yıl,Php,₺ - Türk Lirası,3,60.000 - 60.999
+Erkek,Adana,Remote,250+,QA / Automation,Middle,3 - 5 Yıl,Java,₺ - Türk Lirası,2,55.000 - 55.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Senior,5 - 7 Yıl,.Net,₺ - Türk Lirası,2,75.000 - 79.999
+Kadın,İzmir,Ofis,21 - 50 Kişi,Front-end Developer,Middle,7 - 10 Yıl,Vue,₺ - Türk Lirası,2,49.000 - 49.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Full Stack Developer,Senior,7 - 10 Yıl,Java;.Net;React;Angular,₺ - Türk Lirası,1,90.000 - 94.999
+Erkek,Gaziantep,Ofis,250+,Full Stack Developer,Middle,3 - 5 Yıl,.Net;Php;JavaScript | Html | Css;Flutter,₺ - Türk Lirası,1,31.000 - 31.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Mobile Application Developer (Android),Junior,1 - 3 Yıl,Java;Kotlin,₺ - Türk Lirası,2,42.000 - 42.999
+Erkek,İzmir,Remote,250+,Business Analyst,Middle,3 - 5 Yıl,.Net;,₺ - Türk Lirası,2,85.000 - 89.999
+Erkek,İzmir,Ofis,1 - 5 Kişi,Full Stack Developer,Senior,15 Yıl ve üzeri,.Net,₺ - Türk Lirası,1,90.000 - 94.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Embedded Software Developer,Middle,5 - 7 Yıl,Go;Python;C / C++;Shell,₺ - Türk Lirası,4,75.000 - 79.999
+Erkek,* İsviçre,Hibrit (Ofis + Remote),250+,QA / Automation,Middle,3 - 5 Yıl,Java;Python;Swift;JavaScript | Html | Css,€ - Euro,1,7.000 - 7.999
+Erkek,İstanbul,Remote,1 - 5 Kişi,Front-end Developer,Senior,5 - 7 Yıl,NodeJS;JavaScript | Html | Css;Angular,€ - Euro,1,1.000 - 1.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Middle,1 - 3 Yıl,Go;Python,₺ - Türk Lirası,2,67.000 - 67.999
+Erkek,İstanbul,Ofis,21 - 50 Kişi,Game Developer,Middle,1 - 3 Yıl,.Net;Unity,₺ - Türk Lirası,2,55.000 - 55.999
+Erkek,İstanbul,Ofis,250+,Full Stack Developer,Senior,12 - 14 Yıl,.Net;Angular,₺ - Türk Lirası,2,100.000 - 104.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),11 - 20 Kişi,Project Manager,Senior,10 - 12 Yıl,.Net;Kotlin;Swift;Objective C;C / C++;JavaScript | Html | Css;Vue;Angular,₺ - Türk Lirası,1,35.000 - 35.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),250+,Back-end Developer,Junior,1 - 3 Yıl,.Net,₺ - Türk Lirası,1,43.000 - 43.999
+Erkek,İzmir,Remote,250+,Product Owner,Senior,5 - 7 Yıl,Java;Python,₺ - Türk Lirası,2,67.000 - 67.999
+Erkek,İstanbul,Ofis,51 - 100 Kişi,Front-end Developer,Middle,1 - 3 Yıl,NodeJS;JavaScript | Html | Css;React,₺ - Türk Lirası,1,39.000 - 39.999
+Erkek,Kırklareli,Hibrit (Ofis + Remote),250+,Full Stack Developer,Senior,15 Yıl ve üzeri,.Net;React,₺ - Türk Lirası,2,135.000 - 139.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Full Stack Developer,Middle,3 - 5 Yıl,Java;.Net;Php,₺ - Türk Lirası,2,50.000 - 50.999
+Erkek,İzmir,Ofis,250+,Full Stack Developer,Senior,15 Yıl ve üzeri,.Net,₺ - Türk Lirası,2,39.000 - 39.999
+Erkek,Ankara,Remote,250+,Front-end Developer,Junior,1 - 3 Yıl,NodeJS;JavaScript | Html | Css;React;Vue;Angular;Stencil,₺ - Türk Lirası,2,45.000 - 45.999
+Erkek,Ankara,Hibrit (Ofis + Remote),250+,Full Stack Developer,Junior,1 - 3 Yıl,.Net;JavaScript | Html | Css;Angular,₺ - Türk Lirası,4,50.000 - 50.999
+Kadın,İstanbul,Ofis,21 - 50 Kişi,Full Stack Developer,Middle,5 - 7 Yıl,.Net,₺ - Türk Lirası,2,60.000 - 60.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),250+,QA / Manuel Test,Middle,1 - 3 Yıl,Java,₺ - Türk Lirası,1,45.000 - 45.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),51 - 100 Kişi,Back-end Developer,Middle,1 - 3 Yıl,Java;Angular,₺ - Türk Lirası,2,62.000 - 62.999
+Erkek,Ankara,Ofis,21 - 50 Kişi,Front-end Developer,Senior,10 - 12 Yıl,NodeJS;JavaScript | Html | Css;React;Vue,₺ - Türk Lirası,2,65.000 - 65.999
+Erkek,İstanbul,Remote,11 - 20 Kişi,Back-end Developer,Middle,3 - 5 Yıl,Java,₺ - Türk Lirası,1,61.000 - 61.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Mobile Application Developer (iOS),Senior,5 - 7 Yıl,Swift,₺ - Türk Lirası,2,105.000 - 109.999
+Kadın,İstanbul,Ofis,1 - 5 Kişi,Back-end Developer,Middle,3 - 5 Yıl,Php,₺ - Türk Lirası,2,30.000 - 30.999
+Erkek,İstanbul,Remote,250+,Full Stack Developer,Senior,7 - 10 Yıl,Java;React,₺ - Türk Lirası,2,120.000 - 124.999
+Kadın,İstanbul,Remote,250+,QA / Automation,Middle,3 - 5 Yıl,Java;JavaScript | Html | Css,₺ - Türk Lirası,2,44.000 - 44.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Senior,7 - 10 Yıl,.Net,₺ - Türk Lirası,2,75.000 - 79.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Senior,10 - 12 Yıl,Php;JavaScript | Html | Css,₺ - Türk Lirası,2,80.000 - 84.999
+Erkek,Konya,Remote,101 - 249 Kişi,Mobile Application Developer (Full Stack),Middle,3 - 5 Yıl,Flutter,₺ - Türk Lirası,1,60.000 - 60.999
+Erkek,İstanbul,Remote,250+,DevOps Engineer,Junior,1 - 3 Yıl,Python,₺ - Türk Lirası,4,50.000 - 50.999
+Erkek,İzmir,Ofis,21 - 50 Kişi,Full Stack Developer,Middle,1 - 3 Yıl,.Net;JavaScript | Html | Css;Vue,₺ - Türk Lirası,1,42.000 - 42.999
+Erkek,İstanbul,Remote,250+,Mobile Application Developer (Android),Senior,10 - 12 Yıl,Java;Kotlin,₺ - Türk Lirası,1,65.000 - 65.999
+Erkek,İstanbul,Remote,51 - 100 Kişi,Team / Tech Lead,Senior,12 - 14 Yıl,.Net;NodeJS;Angular,$ - Dolar,1,3.000 - 3.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),101 - 249 Kişi,Product Manager,Senior,5 - 7 Yıl,.Net;Ruby;JavaScript | Html | Css,₺ - Türk Lirası,3,175.000 - 179.999
+Erkek,İstanbul,Remote,51 - 100 Kişi,Back-end Developer,Middle,1 - 3 Yıl,Php;Vue,₺ - Türk Lirası,1,54.000 - 54.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Software Architect,Senior,10 - 12 Yıl,Java;.Net,₺ - Türk Lirası,2,135.000 - 139.999
+Erkek,Kocaeli,Hibrit (Ofis + Remote),101 - 249 Kişi,Database Administrator (DBA),Junior,1 - 3 Yıl,"Oracle Database, Apache Cassandra, MongoDB",₺ - Türk Lirası,1,27.000 - 27.999
+Erkek,İstanbul,Remote,250+,Team / Tech Lead,Senior,12 - 14 Yıl,Java;JavaScript | Html | Css;React,₺ - Türk Lirası,1,110.000 - 114.999
+Kadın,Kocaeli,Remote,21 - 50 Kişi,Full Stack Developer,Middle,3 - 5 Yıl,.Net;JavaScript | Html | Css;Angular,₺ - Türk Lirası,2,53.000 - 53.999
+Erkek,İstanbul,Ofis,101 - 249 Kişi,Team / Tech Lead,Senior,12 - 14 Yıl,.Net,₺ - Türk Lirası,2,95.000 - 99.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),6 - 10 Kişi,Mobile Application Developer (Android),Junior,1 - 3 Yıl,Kotlin,₺ - Türk Lirası,1,30.000 - 30.999
+Erkek,Kayseri,Ofis,250+,CTO,Senior,10 - 12 Yıl,.Net;ABAP,₺ - Türk Lirası,2,90.000 - 94.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),101 - 249 Kişi,Team / Tech Lead,Senior,7 - 10 Yıl,Java,₺ - Türk Lirası,2,130.000 - 134.999
+Erkek,İzmir,Remote,51 - 100 Kişi,Front-end Developer,Senior,12 - 14 Yıl,Php;NodeJS;Python;C / C++;JavaScript | Html | Css;React;Vue;Flutter;Unity,$ - Dolar,2,4.000 - 4.999
+Kadın,Ankara,Ofis,11 - 20 Kişi,Game Developer,Junior,1 - 3 Yıl,Unity,₺ - Türk Lirası,2,32.000 - 32.999
+Erkek,Ankara,Remote,1 - 5 Kişi,Back-end Developer,Junior,1 - 3 Yıl,Python,₺ - Türk Lirası,1,29.000 - 29.999
+Erkek,Antalya,Remote,250+,DevOps Engineer,Senior,15 Yıl ve üzeri,Java;.Net;NodeJS;Python,₺ - Türk Lirası,2,120.000 - 124.999
+Erkek,İzmir,Remote,250+,Back-end Developer,Senior,7 - 10 Yıl,.Net;Go,₺ - Türk Lirası,1,90.000 - 94.999
+Erkek,Ankara,Hibrit (Ofis + Remote),101 - 249 Kişi,Data Scientist,Middle,3 - 5 Yıl,Python;C / C++,₺ - Türk Lirası,2,80.000 - 84.999
+Erkek,İzmir,Hibrit (Ofis + Remote),101 - 249 Kişi,Full Stack Developer,Senior,10 - 12 Yıl,.Net,₺ - Türk Lirası,1,90.000 - 94.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Business Analyst,Junior,1 - 3 Yıl,Python;Manuel Testing ,₺ - Türk Lirası,2,52.000 - 52.999
+Erkek,İzmir,Hibrit (Ofis + Remote),101 - 249 Kişi,Project Manager,Senior,10 - 12 Yıl,Java;.Net;React,₺ - Türk Lirası,1,58.000 - 58.999
+Erkek,Ankara,Hibrit (Ofis + Remote),250+,Front-end Developer,Senior,15 Yıl ve üzeri,Angular,₺ - Türk Lirası,2,120.000 - 124.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),101 - 249 Kişi,QA / Manuel Test,Middle,3 - 5 Yıl,Java,₺ - Türk Lirası,1,50.000 - 50.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Back-end Developer,Middle,1 - 3 Yıl,.Net,₺ - Türk Lirası,1,50.000 - 50.999
+Erkek,Ankara,Ofis,51 - 100 Kişi,Full Stack Developer,Senior,7 - 10 Yıl,Java,₺ - Türk Lirası,1,95.000 - 99.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Back-end Developer,Senior,5 - 7 Yıl,Java;Kotlin;JavaScript | Html | Css;React,€ - Euro,1,5.000 - 5.999
+Erkek,Kocaeli,Remote,101 - 249 Kişi,Back-end Developer,Middle,3 - 5 Yıl,Php,₺ - Türk Lirası,2,45.000 - 45.999
+Erkek,İstanbul,Remote,11 - 20 Kişi,Game Developer,Senior,12 - 14 Yıl,.Net;Unity,₺ - Türk Lirası,2,75.000 - 79.999
+Erkek,Tekirdağ,Hibrit (Ofis + Remote),250+,Front-end Developer,Middle,1 - 3 Yıl,NodeJS;JavaScript | Html | Css;React,₺ - Türk Lirası,2,50.000 - 50.999
+Erkek,İstanbul,Remote,1 - 5 Kişi,Software Architect,Senior,15 Yıl ve üzeri,Php;Python;Swift;JavaScript | Html | Css;Vue,$ - Dolar,1,2.000 - 2.999
+Kadın,Ankara,Ofis,250+,Full Stack Developer,Senior,10 - 12 Yıl,.Net;JavaScript | Html | Css;React,₺ - Türk Lirası,2,90.000 - 94.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),6 - 10 Kişi,Full Stack Developer,Junior,0 - 1 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,1,25.000 - 25.999
+Erkek,Sakarya,Remote,11 - 20 Kişi,Front-end Developer,Junior,1 - 3 Yıl,JavaScript | Html | Css;React,$ - Dolar,1,14.000 - 14.999
+Erkek,Ankara,Hibrit (Ofis + Remote),51 - 100 Kişi,Full Stack Developer,Middle,3 - 5 Yıl,.Net;JavaScript | Html | Css;Angular,₺ - Türk Lirası,1,60.000 - 60.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Software Development Manager / Engineering Manager,Senior,12 - 14 Yıl,.Net;NodeJS;React;React Native,₺ - Türk Lirası,2,140.000 - 144.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Full Stack Developer,Senior,10 - 12 Yıl,Php;NodeJS;Angular,₺ - Türk Lirası,1,67.000 - 67.999
+Erkek,Antalya,Remote,11 - 20 Kişi,Full Stack Developer,Senior,1 - 3 Yıl,.Net;NodeJS;C / C++;JavaScript | Html | Css;Flutter;Unity,£ - Sterlin,1,2.000 - 2.999
+Erkek,İstanbul,Ofis,250+,Data Engineer,Middle,3 - 5 Yıl,Python,₺ - Türk Lirası,2,60.000 - 60.999
+Erkek,İstanbul,Remote,250+,Mobile Application Developer (Android),Senior,5 - 7 Yıl,Kotlin,₺ - Türk Lirası,1,105.000 - 109.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),101 - 249 Kişi,Back-end Developer,Senior,7 - 10 Yıl,.Net,₺ - Türk Lirası,1,75.000 - 79.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),21 - 50 Kişi,Product Manager,Senior,15 Yıl ve üzeri,.Net;JavaScript | Html | Css,₺ - Türk Lirası,2,100.000 - 104.999
+Kadın,İstanbul,Remote,250+,Back-end Developer,Senior,5 - 7 Yıl,Java,₺ - Türk Lirası,1,75.000 - 79.999
+Erkek,Ankara,Hibrit (Ofis + Remote),11 - 20 Kişi,CTO,Senior,10 - 12 Yıl,NodeJS,$ - Dolar,1,7.000 - 7.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Senior,5 - 7 Yıl,Go,₺ - Türk Lirası,2,85.000 - 89.999
+Erkek,Samsun,Remote,250+,Full Stack Developer,Middle,3 - 5 Yıl,Java;Angular,₺ - Türk Lirası,2,45.000 - 45.999
+Erkek,İstanbul,Remote,250+,Front-end Developer,Senior,5 - 7 Yıl,JavaScript | Html | Css;React,₺ - Türk Lirası,2,85.000 - 89.999
+Erkek,İstanbul,Remote,250+,Full Stack Developer,Senior,7 - 10 Yıl,.Net;JavaScript | Html | Css;Blazor,₺ - Türk Lirası,2,54.000 - 54.999
+Erkek,Ankara,Ofis,21 - 50 Kişi,Back-end Developer,Senior,10 - 12 Yıl,Java,₺ - Türk Lirası,2,110.000 - 114.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Front-end Developer,Middle,7 - 10 Yıl,JavaScript | Html | Css;Vue,₺ - Türk Lirası,1,54.000 - 54.999
+Erkek,İzmir,Remote,11 - 20 Kişi,Mobile Application Developer (Android),Junior,1 - 3 Yıl,Java;Kotlin,₺ - Türk Lirası,2,35.000 - 35.999
+Erkek,Ankara,Remote,250+,QA / Automation,Middle,5 - 7 Yıl,Java,₺ - Türk Lirası,2,70.000 - 70.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Team / Tech Lead,Senior,7 - 10 Yıl,.Net;Go,₺ - Türk Lirası,2,110.000 - 114.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),51 - 100 Kişi,Back-end Developer,Senior,5 - 7 Yıl,NodeJS;Go,₺ - Türk Lirası,4,85.000 - 89.999
+Erkek,İstanbul,Remote,11 - 20 Kişi,Front-end Developer,Junior,0 - 1 Yıl,JavaScript | Html | Css;React,₺ - Türk Lirası,1,20.000 - 20.999
+Erkek,Ankara,Remote,250+,Software Architect,Senior,12 - 14 Yıl,.Net;NodeJS;JavaScript | Html | Css;React;Angular;React Native,₺ - Türk Lirası,1,140.000 - 144.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Full Stack Developer,Senior,5 - 7 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,1,60.000 - 60.999
+Erkek,İstanbul,Remote,250+,Team / Tech Lead,Senior,10 - 12 Yıl,NodeJS;JavaScript | Html | Css,₺ - Türk Lirası,2,100.000 - 104.999
+Kadın,Ankara,Ofis,21 - 50 Kişi,Full Stack Developer,Middle,5 - 7 Yıl,.Net,₺ - Türk Lirası,2,45.000 - 45.999
+Erkek,Ankara,Hibrit (Ofis + Remote),250+,Bussines Intelligence,Middle,3 - 5 Yıl,"SQL, PowerBI, ETL Tools",₺ - Türk Lirası,2,50.000 - 50.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Senior,10 - 12 Yıl,.Net,₺ - Türk Lirası,2,135.000 - 139.999
+Erkek,Ankara,Hibrit (Ofis + Remote),51 - 100 Kişi,Embedded Software Developer,Middle,10 - 12 Yıl,.Net;C / C++;Unreal;Powershell,₺ - Türk Lirası,2,105.000 - 109.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Full Stack Developer,Senior,7 - 10 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,2,85.000 - 89.999
+Erkek,Ankara,Ofis,250+,Full Stack Developer,Senior,12 - 14 Yıl,Java;JavaScript | Html | Css;React,₺ - Türk Lirası,2,90.000 - 94.999
+Erkek,Ankara,Ofis,21 - 50 Kişi,Embedded Software Developer,Middle,1 - 3 Yıl,C / C++,₺ - Türk Lirası,3,62.000 - 62.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),21 - 50 Kişi,Full Stack Developer,Middle,3 - 5 Yıl,Java;Python;Vue,₺ - Türk Lirası,2,49.000 - 49.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Full Stack Developer,Middle,3 - 5 Yıl,Php;Vue,₺ - Türk Lirası,2,30.000 - 30.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Front-end Developer,Middle,1 - 3 Yıl,JavaScript | Html | Css;Vue,₺ - Türk Lirası,1,43.000 - 43.999
+Erkek,Sakarya,Ofis,1 - 5 Kişi,Embedded Software Developer,Middle,1 - 3 Yıl,Python;C / C++,₺ - Türk Lirası,2,29.000 - 29.999
+Erkek,Ankara,Hibrit (Ofis + Remote),250+,Full Stack Developer,Junior,0 - 1 Yıl,Java;Angular,₺ - Türk Lirası,2,45.000 - 45.999
+Erkek,Ankara,Ofis,250+,Project Manager,Middle,1 - 3 Yıl,MS SQL,₺ - Türk Lirası,1,70.000 - 70.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),250+,QA / Manuel Test,Middle,1 - 3 Yıl,"SSMS, API Test",₺ - Türk Lirası,2,40.000 - 40.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Junior,1 - 3 Yıl,Java,₺ - Türk Lirası,2,50.000 - 50.999
+Erkek,Antalya,Remote,250+,Front-end Developer,Junior,0 - 1 Yıl,React,₺ - Türk Lirası,2,37.000 - 37.999
+Erkek,İstanbul,Şu an remote ama hibrite döneceğiz.,101 - 249 Kişi,DevOps Engineer,Middle,3 - 5 Yıl,aws,₺ - Türk Lirası,2,70.000 - 70.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Senior,7 - 10 Yıl,Java,₺ - Türk Lirası,1,125.000 - 129.999
+Erkek,İzmir,Hibrit (Ofis + Remote),51 - 100 Kişi,Front-end Developer,Senior,3 - 5 Yıl,JavaScript | Html | Css;Angular,₺ - Türk Lirası,2,46.000 - 46.999
+Kadın,Nevşehir,Remote,250+,Back-end Developer,Junior,0 - 1 Yıl,.Net,₺ - Türk Lirası,1,31.000 - 31.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Front-end Developer,Junior,1 - 3 Yıl,React,₺ - Türk Lirası,2,50.000 - 50.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Full Stack Developer,Junior,1 - 3 Yıl,.Net,₺ - Türk Lirası,1,40.000 - 40.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Back-end Developer,Middle,3 - 5 Yıl,Python,₺ - Türk Lirası,2,64.000 - 64.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Cyber Security,Junior,1 - 3 Yıl,Burp,₺ - Türk Lirası,2,32.000 - 32.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Full Stack Developer,Senior,15 Yıl ve üzeri,.Net;NodeJS;JavaScript | Html | Css;React,₺ - Türk Lirası,1,145.000 - 149.999
+Erkek,Bursa,Remote,250+,Mobile Application Developer (Android),Senior,7 - 10 Yıl,Java;Kotlin,₺ - Türk Lirası,2,110.000 - 114.999
+Erkek,Ankara,Ofis,11 - 20 Kişi,Full Stack Developer,Junior,0 - 1 Yıl,Java;NodeJS;Python;JavaScript | Html | Css;React;c++,₺ - Türk Lirası,2,43.000 - 43.999
+Kadın,İstanbul,Remote,1 - 5 Kişi,Full Stack Developer,Middle,1 - 3 Yıl,Java;NodeJS;Go;Python;C / C++;React,$ - Dolar,1,1.000 - 1.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Team / Tech Lead,Senior,10 - 12 Yıl,.Net;NodeJS;React,₺ - Türk Lirası,1,145.000 - 149.999
+Erkek,İstanbul,Ofis,250+,Team / Tech Lead,Senior,7 - 10 Yıl,NodeJS;JavaScript | Html | Css;React,₺ - Türk Lirası,2,130.000 - 134.999
+Kadın,İstanbul,Remote,51 - 100 Kişi,Back-end Developer,Senior,7 - 10 Yıl,Java,₺ - Türk Lirası,2,105.000 - 109.999
+Erkek,İstanbul,Remote,6 - 10 Kişi,CTO,Senior,10 - 12 Yıl,Unity,$ - Dolar,1,5.000 - 5.999
+Erkek,Ankara,Remote,250+,Back-end Developer,Junior,0 - 1 Yıl,Php,₺ - Türk Lirası,2,34.000 - 34.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),250+,QA / Manuel Test,Senior,5 - 7 Yıl,"Testrail, X-ray, postman, dbeawer",₺ - Türk Lirası,2,68.000 - 68.999
+Erkek,İzmir,Hibrit (Ofis + Remote),250+,Embedded Software Developer,Middle,5 - 7 Yıl,"Python;C / C++;Linux, QNX",₺ - Türk Lirası,4,100.000 - 104.999
+Erkek,İstanbul,Remote,250+,Mobile Application Developer (iOS),Senior,7 - 10 Yıl,Swift;Objective C,₺ - Türk Lirası,2,120.000 - 124.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Back-end Developer,Middle,3 - 5 Yıl,Python,$ - Dolar,1,3.000 - 3.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),101 - 249 Kişi,Back-end Developer,Middle,5 - 7 Yıl,.Net,₺ - Türk Lirası,1,41.000 - 41.999
+Erkek,Ankara,Remote,250+,Software Development Manager / Engineering Manager,Senior,10 - 12 Yıl,.Net;JavaScript | Html | Css;Angular,₺ - Türk Lirası,2,135.000 - 139.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Director of Software Development,Senior,15 Yıl ve üzeri,Java;.Net;Kotlin;Angular;Unity,₺ - Türk Lirası,2,85.000 - 89.999
+Erkek,İzmir,Remote,250+,Back-end Developer,Middle,1 - 3 Yıl,.Net,₺ - Türk Lirası,2,48.000 - 48.999
+Erkek,Ankara,Ofis,250+,Embedded Software Developer,Junior,1 - 3 Yıl,C / C++;Qt,₺ - Türk Lirası,2,65.000 - 65.999
+Erkek,İzmir,Remote,250+,Software Development Manager / Engineering Manager,Senior,12 - 14 Yıl,Java;Kotlin;Swift,₺ - Türk Lirası,2,195.000 - 199.999
+Erkek,Niğde,Remote,21 - 50 Kişi,QA / Automation,Junior,1 - 3 Yıl,JavaScript | Html | Css,$ - Dolar,1,1.000 - 1.999
+Erkek,İzmir,Remote,51 - 100 Kişi,Game Developer,Senior,3 - 5 Yıl,Unity,£ - Sterlin,1,200.000+
+Erkek,Ankara,Hibrit (Ofis + Remote),1 - 5 Kişi,Full Stack Developer,Middle,1 - 3 Yıl,.Net;JavaScript | Html | Css;React,₺ - Türk Lirası,2,30.000 - 30.999
+Erkek,İzmir,Remote,51 - 100 Kişi,Mobile Application Developer (Android),Senior,5 - 7 Yıl,Kotlin,₺ - Türk Lirası,2,140.000 - 144.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),250+,Mobile Application Developer (Android),Middle,3 - 5 Yıl,Kotlin,₺ - Türk Lirası,2,43.000 - 43.999
+Erkek,Kocaeli,Ofis,250+,Embedded Software Developer,Junior,0 - 1 Yıl,C / C++,₺ - Türk Lirası,2,60.000 - 60.999
+Erkek,Aksaray,Remote,1 - 5 Kişi,Mobile Application Developer (Full Stack),Middle,1 - 3 Yıl,Flutter,₺ - Türk Lirası,2,27.000 - 27.999
+Erkek,İzmir,Hibrit (Ofis + Remote),101 - 249 Kişi,Back-end Developer,Senior,5 - 7 Yıl,Java,₺ - Türk Lirası,2,85.000 - 89.999
+Erkek,İstanbul,Remote,250+,Team / Tech Lead,Senior,5 - 7 Yıl,.Net,₺ - Türk Lirası,2,85.000 - 89.999
+Erkek,Ankara,Ofis,101 - 249 Kişi,Full Stack Developer,Senior,5 - 7 Yıl,.Net;Angular,₺ - Türk Lirası,2,75.000 - 79.999
+Erkek,* ABD,Remote,21 - 50 Kişi,Mobile Application Developer (Full Stack),Senior,10 - 12 Yıl,JavaScript | Html | Css;React;React Native,$ - Dolar,1,4.000 - 4.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),101 - 249 Kişi,Full Stack Developer,Senior,5 - 7 Yıl,.Net;JavaScript | Html | Css;React;Angular,₺ - Türk Lirası,2,80.000 - 84.999
+Erkek,İstanbul,Ofis,250+,Mobile Application Developer (iOS),Senior,7 - 10 Yıl,Swift,₺ - Türk Lirası,2,115.000 - 119.999
+Kadın,Ankara,Remote,250+,Back-end Developer,Senior,5 - 7 Yıl,Java,₺ - Türk Lirası,2,70.000 - 70.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Team / Tech Lead,Senior,7 - 10 Yıl,.Net;NodeJS;JavaScript | Html | Css,₺ - Türk Lirası,2,100.000 - 104.999
+Erkek,İstanbul,Ofis,1 - 5 Kişi,Full Stack Developer,Junior,1 - 3 Yıl,.Net;JavaScript | Html | Css;Vue;Angular,₺ - Türk Lirası,1,18.000 - 18.999
+Erkek,Kırklareli,Remote,21 - 50 Kişi,Full Stack Developer,Junior,0 - 1 Yıl,JavaScript | Html | Css;Vue;Astro,₺ - Türk Lirası,2,32.000 - 32.999
+Erkek,İstanbul,Remote,250+,DevOps Engineer,Senior,12 - 14 Yıl,Java;.Net;Php;NodeJS;Go;Python;Kotlin,$ - Dolar,1,8.000 - 8.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Team / Tech Lead,Senior,7 - 10 Yıl,Php;NodeJS;JavaScript | Html | Css;Angular;Flutter,₺ - Türk Lirası,1,70.000 - 70.999
+Erkek,Samsun,Remote,11 - 20 Kişi,Front-end Developer,Middle,3 - 5 Yıl,JavaScript | Html | Css;React;React Native,₺ - Türk Lirası,2,49.000 - 49.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),21 - 50 Kişi,Back-end Developer,Senior,7 - 10 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,2,120.000 - 124.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),11 - 20 Kişi,Back-end Developer,Senior,7 - 10 Yıl,.Net,₺ - Türk Lirası,1,90.000 - 94.999
+Erkek,Kocaeli,Ofis,1 - 5 Kişi,Project Manager,Senior,15 Yıl ve üzeri,.Net,₺ - Türk Lirası,2,60.000 - 60.999
+Erkek,İstanbul,Ofis,250+,Full Stack Developer,Junior,0 - 1 Yıl,.Net;JavaScript | Html | Css,₺ - Türk Lirası,2,35.000 - 35.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),21 - 50 Kişi,CTO,Senior,12 - 14 Yıl,NodeJS;Python;Ruby;JavaScript | Html | Css;React;React Native,₺ - Türk Lirası,1,90.000 - 94.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),250+,Front-end Developer,Senior,5 - 7 Yıl,Angular,₺ - Türk Lirası,2,68.000 - 68.999
+Kadın,Ankara,Remote,250+,Full Stack Developer,Middle,1 - 3 Yıl,.Net;Angular,₺ - Türk Lirası,2,45.000 - 45.999
+Erkek,Antalya,Ofis,21 - 50 Kişi,Full Stack Developer,Junior,0 - 1 Yıl,Php,₺ - Türk Lirası,1,17.000 - 17.999
+Erkek,İzmir,Hibrit (Ofis + Remote),250+,Front-end Developer,Senior,3 - 5 Yıl,NodeJS;JavaScript | Html | Css;React;Vue,₺ - Türk Lirası,2,50.000 - 50.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Full Stack Developer,Middle,1 - 3 Yıl,.Net,₺ - Türk Lirası,2,38.000 - 38.999
+Erkek,Aydın,Remote,1 - 5 Kişi,Full Stack Developer,Junior,1 - 3 Yıl,.Net,₺ - Türk Lirası,2,27.000 - 27.999
+Erkek,İzmir,Hibrit (Ofis + Remote),21 - 50 Kişi,Full Stack Developer,Middle,1 - 3 Yıl,Php;NodeJS;JavaScript | Html | Css;Vue,₺ - Türk Lirası,1,39.000 - 39.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),51 - 100 Kişi,Mobile Application Developer (Android),Junior,1 - 3 Yıl,Kotlin,₺ - Türk Lirası,1,40.000 - 40.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),6 - 10 Kişi,Full Stack Developer,Middle,3 - 5 Yıl,NodeJS;Python;Vue,₺ - Türk Lirası,1,70.000 - 70.999
+Erkek,Bursa,Hibrit (Ofis + Remote),250+,Front-end Developer,Middle,1 - 3 Yıl,Vue;React Native,₺ - Türk Lirası,2,42.000 - 42.999
+Erkek,İstanbul,Remote,6 - 10 Kişi,CTO,Senior,5 - 7 Yıl,Go;Python;React;React Native,₺ - Türk Lirası,4,200.000+
+Kadın,İstanbul,Remote,250+,Full Stack Developer,Senior,5 - 7 Yıl,.Net,₺ - Türk Lirası,1,80.000 - 84.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Full Stack Developer,Middle,1 - 3 Yıl,.Net;React,₺ - Türk Lirası,1,58.000 - 58.999
+Erkek,Sakarya,Remote,11 - 20 Kişi,Full Stack Developer,Middle,3 - 5 Yıl,NodeJS;JavaScript | Html | Css;React;Vue,₺ - Türk Lirası,2,46.000 - 46.999
+Kadın,* ABD,Hibrit (Ofis + Remote),101 - 249 Kişi,Team / Tech Lead,Senior,3 - 5 Yıl,Java;JavaScript | Html | Css,$ - Dolar,2,15.000 - 15.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),1 - 5 Kişi,Full Stack Developer,Senior,5 - 7 Yıl,"NodeJS;Python;JavaScript | Html | Css;Vue;aws,gcp",₺ - Türk Lirası,1,52.000 - 52.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),21 - 50 Kişi,Full Stack Developer,Senior,7 - 10 Yıl,.Net;Vue;Angular,₺ - Türk Lirası,2,75.000 - 79.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),250+,Business Analyst,Senior,5 - 7 Yıl,.Net;Python;JavaScript | Html | Css;React;React Native,₺ - Türk Lirası,2,90.000 - 94.999
+Erkek,İstanbul,Ofis,250+,Project Manager,Senior,7 - 10 Yıl,"Troia, power platform ",₺ - Türk Lirası,2,115.000 - 119.999
+Erkek,Ankara,Remote,250+,Full Stack Developer,Junior,1 - 3 Yıl,Java;Angular,₺ - Türk Lirası,2,55.000 - 55.999
+Erkek,İstanbul,Remote,21 - 50 Kişi,Full Stack Developer,Senior,7 - 10 Yıl,.Net;React,₺ - Türk Lirası,2,66.000 - 66.999
+Erkek,İstanbul,Remote,51 - 100 Kişi,Data Scientist,Senior,3 - 5 Yıl,Python,₺ - Türk Lirası,2,69.000 - 69.999
+Erkek,İzmir,Hibrit (Ofis + Remote),250+,Mobile Application Developer (Full Stack),Senior,3 - 5 Yıl,Java;.Net;Kotlin;JavaScript | Html | Css,₺ - Türk Lirası,2,75.000 - 79.999
+Kadın,İstanbul,Hibrit (Ofis + Remote),11 - 20 Kişi,UI/UX Designer,Middle,3 - 5 Yıl,"Figma, Photoshop, Illustrator",₺ - Türk Lirası,2,39.000 - 39.999
+Erkek,İstanbul,Hibrit (Ofis + Remote),51 - 100 Kişi,Software Architect,Senior,10 - 12 Yıl,.Net,₺ - Türk Lirası,2,125.000 - 129.999
+Erkek,İstanbul,Remote,250+,Back-end Developer,Middle,1 - 3 Yıl,Java;.Net,₺ - Türk Lirası,3,52.000 - 52.999
