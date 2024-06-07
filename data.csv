@@ -1,4 +1,4 @@
-city,company_size,position,level,experience,raise_period,office,hybrid,remote,mean_salary,JavaScript / TypeScript and related frameworks,C# / .NET,Java and related frameworks,Python,PHP,"C, C++",Kotlin,Swift,Golang,Flutter
+city,company_size,position,level,experience,raise_period,office,hybrid,remote,salary,JavaScript / TypeScript and related frameworks,C# / .NET,Java and related frameworks,Python,PHP,"C, C++",Kotlin,Swift,Golang,Flutter
 1,3,Mobile Development,3,4,2.0,no,no,yes,4309,0,0,0,0,0,0,0,1,0,0
 0,1,Full Stack Development,2,2,2.0,yes,no,no,1350,1,0,1,0,0,0,0,0,0,0
 0,1,Quality Assurance / Testing,1,2,2.0,no,no,yes,1009,0,0,0,1,0,0,0,0,0,0

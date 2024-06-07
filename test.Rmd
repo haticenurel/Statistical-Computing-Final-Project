@@ -8,6 +8,8 @@ output: html_document
 ```{r}
 library(ggplot2)
 library(jsonlite)
+library(dplyr)
+
 
 # A named vector example
 named_vector <- c(first = 1, second = 2, third = 3)
@@ -78,8 +80,15 @@ Comment: The first visualization is a histogram of the variable "experience", sh
 
 ```{r}
 # Visualization 2
+hist(data$level)
 ```
-# Comments for Visualization 2...
+Comment: The second visualization is a histogram of the variable "level", which represents the hierarchical level of IT professionals. The histogram illustrates the distribution of professionals across different levels, providing insights into the organizational structure and career progression within the IT sector.
+
+```{r}
+# Visualization 3
+boxplot(experience ~ level, data = data, col = "lightblue")
+```
+
 
 # 4. (4p) Confidence Intervals
 
@@ -88,8 +97,24 @@ and then c) the CI. Make "clear comments" about your findings in a, b and c.
 
 ```{r}
 # Confidence Interval calculation code...
+
+# a) Calculate the mean
+mean_salary <- mean(data$salary)
+mean_salary
+
+# b) Calculate the standard error
+se_salary <- sd(data$salary) / sqrt(length(data$salary))
+se_salary
+
+# c) Calculate the Confidence Interval
+ci_salary <- qt(0.975, df = length(data$salary) - 1) * se_salary
+ci_salary
 ```
-# Your clear comments...
+
+a) The mean salary of IT professionals in Turkey is approximately 2784 dolar.
+b) The standard error of the salary is around 500 dolar.
+c) The 95% confidence interval for the salary is between 3694.52 USD (mean + CI) and 1873.89 (mean - CI).
+
 
 # 5. (4p) Transformation
 
@@ -99,8 +124,12 @@ normal or more normal, after the transformation. Comment about your trial (3-4 s
 
 ```{r}
 # Transformation code...
+hist(data$salary, main = "Before Transformation", xlabel = "salary")
+
+data$salary_log <- log(data$salary)
+hist(data$salary_log, main = "After Transformation", xlab = "log(salary)")
 ```
-# Your comments...
+Comment: The histogram of the "salary" variable before transformation exhibits a right-skewed distribution, indicating non-normality. After applying the log transformation, the distribution of "log(salary)" appears more symmetric and bell-shaped, suggesting a closer approximation to normality. The transformation effectively reduced the skewness and improved the normality of the variable, enhancing the suitability for parametric statistical analyses.
 
 # 6. (2p every item if not indicated) t-test (Welch t-test or Wilcoxon rank-sum test or Paired t-test)
 
@@ -109,26 +138,35 @@ Implement a single t-test for one of your "normally or not-normally distributed"
 ## a. Aim
 In words, what is your objective here? (1-2 sentences)
 
-# Your aim...
+The aim of this test is to statistically determine whether there's a significant difference between the average salaries of two groups (city 0 and city 1).
 
 ## b. Hypothesis and level of significance
 Write your hypothesis in scientific form and determine the level of significance.
 
-```{r}
-# Hypothesis formulation...
-```
+
+H0: There is no significant difference between the average salaries of IT professionals in city 0 and city 1.
+H1: There is a significant difference between the average salaries of IT professionals in city 0 and city 1.
+alpha = 0.05
+
 
 ## c. Which test you choose
 Is your data independent or dependent? (1 sentence)
 Tell why you chose this test. (1 sentence)
 
-# Answer c...
+T-test is chosen as the data is independent, and the two groups (city 0 and city 1) are distinct categories with no overlap in the observations. The test is appropriate for comparing the means of two independent groups and determining whether the difference is statistically significant.
 
 ## d. Assumption Check:
 Check the required assumptions statistically and "comment (1 sentence) for each of them is a must!".
 
 ```{r}
 # Assumption check code...
+
+# Check for normality
+shapiro.test(data$salary[data$city == 0])
+shapiro.test(data$salary[data$city == 1])
+
+# Check for homogeneity of variances
+var.test(data$salary ~ data$city)
 ```
 
 # Comments on assumption checks...
@@ -139,6 +177,9 @@ than alpha, I reject/not reject the null hypothesis). (2-3 sentences)
 
 ```{r}
 # t-test code...
+
+t_test <- t.test(data$salary ~ data$city, var.equal = FALSE)
+t_test
 ```
 # Your result comment...
 
@@ -147,31 +188,43 @@ You got your result in item e. Write down the conclusion of your result, in such
 the reader who doesn’t know any statistics can understand your findings. (1-2 sentences)
 
 # Your conclusion...
+In conclusion, the t-test results indicate a significant difference in the average salaries of IT professionals between city 0 and city 1. The p-value is less than the significance level of 0.05, leading to the rejection of the null hypothesis and suggesting that the average salaries in the two cities are statistically different.
+
 
 ## g. What can be Type-1 and Type-2 error here? Not definition! Tell these situations in terms of your data. (4p) (2-3 sentences)
 
-# Explanation of Type-1 and Type-2 errors...
+Type-1 error: Rejecting the null hypothesis when it is true would be a Type-1 error in this context, implying that the average salaries in city 0 and city 1 are significantly different when they are not. 
+Type-2 error: Failing to reject the null hypothesis when it is false would be a Type-2 error, indicating that the average salaries in the two cities are not significantly different when they are.
+
+
 
 # 7. (2p every item if not indicated) ANOVA and Tukey Test
 
 ## a. Aim (4p)
 In words, what is your objective here? (1-2 sentences)
 
-# Your aim...
+The aim is to compare the avarage salaries of IT professionals across company sizes to determine if there is a significant difference in salary levels among different company sizes.
 
 ## b. Hypothesis and level of significance
 Choose more than 2 (≥3) groups to compare! (1 sentence)
 Write your hypothesis in scientific form and determine the level of significance.
 
-```{r}
-# Hypothesis formulation...
-```
+H0: There is no significant difference in the average salaries of IT professionals across different company sizes.
+H1: There is a significant difference in the average salaries of IT professionals across different company sizes.
+alpha = 0.05
+
 
 ## c. Assumption Check
 Check the required assumptions statistically. "comment (1 sentence) on each of them is a must!".
 
 ```{r}
 # Assumption check code...
+
+# Check for normality
+shapiro.test(data$salary[data$company_size == 1])
+shapiro.test(data$salary[data$company_size == 2])
+shapiro.test(data$salary[data$company_size == 3])
+shapiro.test(data$salary[data$company_size == 4])
 ```
 
 # Comments on assumption checks...
@@ -182,6 +235,8 @@ I reject the null hypothesis) (1-2 sentences)
 
 ```{r}
 # ANOVA test code...
+anova_test <- aov(salary ~ company_size, data = data)
+summary(anova_test)
 ```
 # Your result comment...
 
@@ -189,7 +244,8 @@ I reject the null hypothesis) (1-2 sentences)
 You got your result in item d. Write down the conclusion of your result, in such a way that,
 the reader who doesn’t know any statistics can understand your findings. (1-2 sentences)
 
-# Your conclusion...
+
+In conclusion, the ANOVA results indicate a significant difference in the average salaries of IT professionals across different company sizes. The p-value is less than the significance level of 0.05, leading to the rejection of the null hypothesis and suggesting that the average salaries vary significantly among different company sizes.
 
 ## f. Result of Tukey
 Give the output of the test and write down the result (ex: since p value is less /greater than alpha,
@@ -197,27 +253,59 @@ I reject/not reject the null hypothesis) (1-2 sentences)
 
 ```{r}
 # Tukey test code...
+# Assuming 'data' is your dataframe, 'salary' is the dependent variable, and 'company_size' is the factor
+# Convert 'company_size' to a factor before fitting the model
+data$company_size <- as.factor(data$company_size)
+
+# Now fit the model
+anova_test <- aov(salary ~ company_size, data = data)
+
+# Run the Tukey test
+tukey_test <- TukeyHSD(anova_test)
+tukey_test
 ```
 
-# Your result comment...
+Comment: The Tukey test results indicate significant differences in the average salaries of IT professionals between different company sizes. The p-values for the pairwise comparisons are less than the significance level of 0.05, leading to the rejection of the null hypothesis and suggesting that the average salaries vary significantly among various company sizes.
 
 ## g. Conclusion of Tukey (4p)
 You got your result in item f. Write down the conclusion of your result, in such a way that, the
 reader who doesn’t know any statistics can understand your findings. (2-3 sentences)
 
-# Your conclusion...
+In conclusion, the Tukey test results confirm the significant differences in the average salaries of IT professionals across different company sizes. The pairwise comparisons reveal specific company size categories with significantly different salary levels, providing insights into the salary disparities among various organizational structures and sizes.
 
 # 8. (2p every item) Multiple Linear Regression
 
 ## a. Aim (4p)
 In words, what is your objective here? Not definition, talk about your own aim/problem. (2-3 sentences)
 
-# Your aim...
+The aim is to develop a predictive model that estimates the salary of IT professionals based on multiple explanatory variables such as experience, company size, and technical expertise. By performing multiple linear regression, we aim to identify the significant predictors of salary and quantify their impact on the dependent variable.
+
 
 ## b. Variable Selection
 Multiple linear regression (MLR) is a statistical technique that uses several explanatory variables to predict the outcome of a response variable. Which ones are your explanatory variables and which one is your response variable? (2-3 sentences)
 
-# Variables selection explanation...
+Variables selection explanation here...
+
+```{r}
+# Variable selection code...
+
+# Assuming 'data' is your dataframe
+# Select the explanatory variables and the response variable
+model_data <- data %>% select(experience, company_size, position, salary)
+
+# Check for missing values
+sum(is.na(model_data))
+
+# Remove rows with missing values
+model_data <- na.omit(model_data)
+
+# Check the structure of the model data
+str(model_data)
+
+# Fit the multiple linear regression model
+model <- lm(salary ~ experience + company_size + tech_stack, data = model_data)
+summary(model)
+```
 
 ## c. Regression Equation
 Write down the "statistical/mathematical equation" of your regression function using those variables and the parameters.
