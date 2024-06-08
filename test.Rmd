@@ -29,12 +29,11 @@ Please find your original dataset or datasets; and describe your data in the fir
 
 ```{r}
 # Load dataset and print the first few rows
-# Assuming 'data.csv' is the file name of your dataset
 data <- read.csv("data.csv")
 head(data)
 ```
 
-The dataset outlines information on IT professionals in Turkey, detailing their work type, job position, experience, and technical expertise. Each entry includes the individual's gender, city of residence, company size they work within, along with their level, tech stack, and salary details in Turkish Lira. Salary ranges are associated with raise periods, possibly indicating bi-annual or annual increments. The data exemplifies the diversity of the IT workforce across various regions and company sizes, revealing prevalent tech stacks among different roles.
+The data set outlines information on IT professionals in Turkey, detailing their work type, job position, experience, and technical expertise. Each entry includes the individual's gender, city of residence, company size they work within, along with their level, tech stack, and salary details in Turkish Lira. Salary ranges are associated with raise periods, possibly indicating bi-annual or annual increments. The data exemplifies the diversity of the IT workforce across various regions and company sizes, revealing prevalent tech stacks among different roles.
 
 # 2. (3p) Exploratory and descriptive data analysis
 
@@ -51,6 +50,11 @@ In exploratory and descriptive data analysis, we focus on summarizing the main c
 any(is.na(data))
 ```
 Comment: The dataset doesn’t contain any missing values.
+
+```{r}
+max(data$salary)
+```
+
 
 # 3. (4p) Data Visualization
 
@@ -76,43 +80,115 @@ cat(json)
 ggplot(data = data, aes(x = experience)) +
     geom_histogram(fill = "blue", color = "black", binwidth = 1)
 ```
-Comment: The first visualization is a histogram of the variable "experience", showing the distribution of experience levels among IT professionals in Turkey. The histogram is colored in blue and has a binwidth of 5, providing an overview of the frequency of different experience levels.
+
+The first visualization is a histogram of the variable "experience", showing the distribution of experience levels among IT professionals in Turkey. The histogram is colored in blue and has a binwidth of 5, providing an overview of the frequency of different experience levels.
 
 ```{r}
 # Visualization 2
 hist(data$level)
 ```
-Comment: The second visualization is a histogram of the variable "level", which represents the hierarchical level of IT professionals. The histogram illustrates the distribution of professionals across different levels, providing insights into the organizational structure and career progression within the IT sector.
+
+The second visualization is a histogram of the variable "level", which represents the hierarchical level of IT professionals. The histogram illustrates the distribution of professionals across different levels, providing insights into the organizational structure and career progression within the IT sector.
 
 ```{r}
 # Visualization 3
 boxplot(experience ~ level, data = data, col = "lightblue")
 ```
 
+```{r}
+hist(data$salary)
+```
+
+Remove outlier:
+```{r}
+data <- data %>% filter(salary < 138000)
+hist(data$salary)
+```
+
 
 # 4. (4p) Confidence Intervals
 
-Build '2 Confidence Intervals' step by step: a) Calculate the mean, then b) standard error,
-and then c) the CI. Make "clear comments" about your findings in a, b and c.
-
+The first thing we’ll do is to get the data into a nicer form.
 ```{r}
-# Confidence Interval calculation code...
-
-# a) Calculate the mean
-mean_salary <- mean(data$salary)
-mean_salary
-
-# b) Calculate the standard error
-se_salary <- sd(data$salary) / sqrt(length(data$salary))
-se_salary
-
-# c) Calculate the Confidence Interval
-ci_salary <- qt(0.975, df = length(data$salary) - 1) * se_salary
-ci_salary
+unique_values <- unique(data$position)
+print(unique_values)
 ```
 
-a) The mean salary of IT professionals in Turkey is approximately 2784 dolar.
-b) The standard error of the salary is around 500 dolar.
+
+```{r}
+library(dplyr)
+library(plyr)
+
+data <- transform(data,
+    office = as.factor(mapvalues(office, c(0, 1), c("no", "yes"))),
+    hybrid = as.factor(mapvalues(hybrid, c(0, 1), c("no", "yes"))),
+    remote = as.factor(mapvalues(remote, c(0, 1), c("no", "yes"))),
+    position = as.factor(mapvalues(position, c(1:32), c(
+        "Mobile Development",
+        "Full Stack Development",
+        "Quality Assurance / Testing",
+        "Backend Development",
+        "Business Analysis",
+        "Frontend Development",
+        "Software Development",
+        "Business Intelligence",
+        "Architectural Roles",
+        "Team and Technical Leadership",
+        "Product Management",
+        "Cyber Security",
+        "Embedded Systems",
+        "Management Roles",
+        "Data Science",
+        "Uncategorized / Other",
+        "Data Engineering",
+        "Executive Roles",
+        "Data Analysis",
+        "DevOps",
+        "Project Management",
+        "Integration Development",
+        "Artificial Intelligence / Machine Learning",
+        "System Administration",
+        "Cloud Engineering",
+        "User Interface / User Experience",
+        "Internship",
+        "Data Storage and Management",
+        "Blockchain Development",
+        "Network Engineering",
+        "IT Support",
+        "SAP/ABAP Development"
+    )))
+)
+```
+```{r}
+str(data)
+```
+
+
+Build '2 Confidence Intervals' step by step: 
+a) Calculate the mean, then 
+b) standard error,
+c) the CI. Make "clear comments" about your findings in a, b and c.
+
+
+```{r}
+# a) calculate the mean
+print(mean(data$salary))
+# b) standard error
+print(sd(data$salary))
+
+######### Standard deviation is known#########################
+norm.interval <- function(data, variance, conf.level = 0.95) {
+    z <- qnorm((1 - conf.level) / 2, lower.tail = FALSE)
+    xbar <- mean(data)
+    sdx <- sqrt(variance / length(data))
+    c(xbar - z * sdx, xbar + z * sdx)
+}
+# data.var<-2784
+norm.interval(data$salary, 3000)
+```
+
+a) The mean salary of IT professionals in Turkey is approximately 2784 dollar.
+b) The standard error of the salary is around 500 dollar.
 c) The 95% confidence interval for the salary is between 3694.52 USD (mean + CI) and 1873.89 (mean - CI).
 
 
@@ -129,11 +205,25 @@ hist(data$salary, main = "Before Transformation", xlabel = "salary")
 data$salary_log <- log(data$salary)
 hist(data$salary_log, main = "After Transformation", xlab = "log(salary)")
 ```
-Comment: The histogram of the "salary" variable before transformation exhibits a right-skewed distribution, indicating non-normality. After applying the log transformation, the distribution of "log(salary)" appears more symmetric and bell-shaped, suggesting a closer approximation to normality. The transformation effectively reduced the skewness and improved the normality of the variable, enhancing the suitability for parametric statistical analyses.
+The histogram of the "salary" variable before transformation exhibits a right-skewed distribution, indicating non-normality. After applying the log transformation, the distribution of "log(salary)" appears more symmetric and bell-shaped, suggesting a closer approximation to normality. The transformation effectively reduced the skewness and improved the normality of the variable, enhancing the suitability for parametric statistical analyses.
 
 # 6. (2p every item if not indicated) t-test (Welch t-test or Wilcoxon rank-sum test or Paired t-test)
 
 Implement a single t-test for one of your "normally or not-normally distributed" variable:
+
+```{r}
+library(ggplot2)
+
+data$city <- factor(data$city)
+options(scipen = 999)
+
+library(scales)
+
+ggplot(data) +
+    aes(x = city, y = salary) +
+    geom_boxplot(fill = "#0c4c8a") +
+    theme_minimal()
+```
 
 ## a. Aim
 In words, what is your objective here? (1-2 sentences)
@@ -147,6 +237,7 @@ Write your hypothesis in scientific form and determine the level of significance
 H0: There is no significant difference between the average salaries of IT professionals in city 0 and city 1.
 H1: There is a significant difference between the average salaries of IT professionals in city 0 and city 1.
 alpha = 0.05
+p-value = 0.4328 significance level of t-test
 
 
 ## c. Which test you choose
@@ -159,8 +250,6 @@ T-test is chosen as the data is independent, and the two groups (city 0 and city
 Check the required assumptions statistically and "comment (1 sentence) for each of them is a must!".
 
 ```{r}
-# Assumption check code...
-
 # Check for normality
 shapiro.test(data$salary[data$city == 0])
 shapiro.test(data$salary[data$city == 1])
@@ -168,8 +257,7 @@ shapiro.test(data$salary[data$city == 1])
 # Check for homogeneity of variances
 var.test(data$salary ~ data$city)
 ```
-
-# Comments on assumption checks...
+The p-value is less than alpha. So data distributions do not seem to follow a normal distribution.
 
 ## e. Result
 Give the output of the test and then write down the result (ex: since p value is less /greater
@@ -177,17 +265,17 @@ than alpha, I reject/not reject the null hypothesis). (2-3 sentences)
 
 ```{r}
 # t-test code...
-
 t_test <- t.test(data$salary ~ data$city, var.equal = FALSE)
 t_test
 ```
-# Your result comment...
+The p-value is less than alpha. We reject the null hypothesis.
 
 ## f. Conclusion (4p)
 You got your result in item e. Write down the conclusion of your result, in such a way that,
 the reader who doesn’t know any statistics can understand your findings. (1-2 sentences)
 
-# Your conclusion...
+We can't say there is no significant difference between the average salaries of IT professionals in city 0 and city 1.
+
 In conclusion, the t-test results indicate a significant difference in the average salaries of IT professionals between city 0 and city 1. The p-value is less than the significance level of 0.05, leading to the rejection of the null hypothesis and suggesting that the average salaries in the two cities are statistically different.
 
 
@@ -203,7 +291,7 @@ Type-2 error: Failing to reject the null hypothesis when it is false would be a 
 ## a. Aim (4p)
 In words, what is your objective here? (1-2 sentences)
 
-The aim is to compare the avarage salaries of IT professionals across company sizes to determine if there is a significant difference in salary levels among different company sizes.
+The aim is to compare the average salaries of IT professionals across company sizes to determine if there is a significant difference in salary levels among different company sizes.
 
 ## b. Hypothesis and level of significance
 Choose more than 2 (≥3) groups to compare! (1 sentence)
@@ -218,16 +306,13 @@ alpha = 0.05
 Check the required assumptions statistically. "comment (1 sentence) on each of them is a must!".
 
 ```{r}
-# Assumption check code...
-
 # Check for normality
 shapiro.test(data$salary[data$company_size == 1])
 shapiro.test(data$salary[data$company_size == 2])
 shapiro.test(data$salary[data$company_size == 3])
 shapiro.test(data$salary[data$company_size == 4])
 ```
-
-# Comments on assumption checks...
+All company size types has lower p value than alpha.
 
 ## d. Result of ANOVA
 Give the output of the test and then write down the result (ex:since p value is less than alpha,
@@ -238,21 +323,20 @@ I reject the null hypothesis) (1-2 sentences)
 anova_test <- aov(salary ~ company_size, data = data)
 summary(anova_test)
 ```
-# Your result comment...
+P value is higher than alpha. So we can conclude that there are no significant differences between salary based on company-size.
 
 ## e. Conclusion of ANOVA (4p)
 You got your result in item d. Write down the conclusion of your result, in such a way that,
 the reader who doesn’t know any statistics can understand your findings. (1-2 sentences)
 
 
-In conclusion, the ANOVA results indicate a significant difference in the average salaries of IT professionals across different company sizes. The p-value is less than the significance level of 0.05, leading to the rejection of the null hypothesis and suggesting that the average salaries vary significantly among different company sizes.
+In conclusion, the ANOVA results indicate no significant difference in the average salaries of IT professionals across different company sizes. The p-value is higher than the significance level of 0.05, we can't reject the null hypothesis.
 
 ## f. Result of Tukey
 Give the output of the test and write down the result (ex: since p value is less /greater than alpha,
 I reject/not reject the null hypothesis) (1-2 sentences)
 
 ```{r}
-# Tukey test code...
 # Assuming 'data' is your dataframe, 'salary' is the dependent variable, and 'company_size' is the factor
 # Convert 'company_size' to a factor before fitting the model
 data$company_size <- as.factor(data$company_size)
@@ -265,73 +349,111 @@ tukey_test <- TukeyHSD(anova_test)
 tukey_test
 ```
 
-Comment: The Tukey test results indicate significant differences in the average salaries of IT professionals between different company sizes. The p-values for the pairwise comparisons are less than the significance level of 0.05, leading to the rejection of the null hypothesis and suggesting that the average salaries vary significantly among various company sizes.
+The Tukey test results indicate no significant differences in the average salaries of IT professionals between different company sizes.
 
 ## g. Conclusion of Tukey (4p)
 You got your result in item f. Write down the conclusion of your result, in such a way that, the
 reader who doesn’t know any statistics can understand your findings. (2-3 sentences)
 
-In conclusion, the Tukey test results confirm the significant differences in the average salaries of IT professionals across different company sizes. The pairwise comparisons reveal specific company size categories with significantly different salary levels, providing insights into the salary disparities among various organizational structures and sizes.
+In conclusion, the Tukey test results confirm the no significant differences in the average salaries of IT professionals across different company sizes. The pairwise comparisons reveal specific company size categories with no significantly different salary levels.
 
-# 8. (2p every item) Multiple Linear Regression
 
-## a. Aim (4p)
+# 8.Multiple Linear Regression
+
+## a. Aim
 In words, what is your objective here? Not definition, talk about your own aim/problem. (2-3 sentences)
 
 The aim is to develop a predictive model that estimates the salary of IT professionals based on multiple explanatory variables such as experience, company size, and technical expertise. By performing multiple linear regression, we aim to identify the significant predictors of salary and quantify their impact on the dependent variable.
 
-
 ## b. Variable Selection
 Multiple linear regression (MLR) is a statistical technique that uses several explanatory variables to predict the outcome of a response variable. Which ones are your explanatory variables and which one is your response variable? (2-3 sentences)
 
-Variables selection explanation here...
-
-```{r}
-# Variable selection code...
-```
+In our data analysis, the response variable is salary, and the other variables are explanatory variables.
 
 ## c. Regression Equation
 Write down the "statistical/mathematical equation" of your regression function using those variables and the parameters.
 
-# Your regression equation...
+salary = city + company_size + position + level + experience + raise_period + office + hybrid + remote + salary + `JavaScript...TypeScript.and.related.frameworks` + `C.....NET` + `Java.and.related.frameworks` + Python + PHP + `C..C..` + Kotlin + Swift + Golang + Flutter
 
 ## d. Hypothesis and level of significance (4p)
 Write your hypothesis in scientific form and determine the level of significance.
 
-```{r}
-# Hypothesis formulation...
-```
+Null hypothesis (H0): There is no significant relationship between the independent variables (city, company_size, position, level, raise_period, office, hybrid, JavaScript...TypeScript.and.related.frameworks, C.....NET, Java.and.related.frameworks, Python, PHP, C..C.., Kotlin, Swift, Golang, Flutter) and the dependent variable (salary).
+
+Alternative hypothesis (H1): There is a significant relationship between the independent variables and the dependent variable.
+
+The p-value from the t-test is 0.4328. This value is greater than the standard alpha level of significance (usually 0.05).
 
 ## e. Find the Best Model
 Use step function and find the best model, describe the reason which makes it the best one.
 
 ```{r}
-# Model selection code...
+# Load the necessary library
+library(MASS)
+
+# Perform stepwise regression
+best_model <- step(lm(salary ~ ., data = data), direction = "both")
 ```
 
-# Explanation of the best model...
+salary ~ city + company_size + level + experience + office + Java.and.related.frameworks + C..C.. + Swift + Golang
+
+This model was selected based on minimizing the AIC (Akaike Information Criterion), which balances the goodness of fit with the complexity of the model. The AIC value for this model is 4166.04, which is the lowest among all the models considered.
 
 ## f. Assumption Check (4p)
 Check the required assumptions statistically, "comment (1 sentence) on each of them is a must!".
 
+
+To check the required assumptions for the best model statistically, we typically focus on several key assumptions of linear regression:
+
+Linearity: The relationship between the independent variables and the dependent variable should be linear.
+Independence: The residuals should be independent of each other.
+Homoscedasticity: The variance of the residuals should be constant across all levels of the independent variables.
+Normality: The residuals should be normally distributed.
+
 ```{r}
-# Assumption check code...
+library(caret)
+library(car)
+
+# Extract residuals from the best model
+residuals <- residuals(best_model)
+
+# Check assumptions
+plot(best_model)
+# Repeat for other predictors
+
+# Independence: Durbin-Watson Test
+durbinWatsonTest(best_model)
+
+# Homoscedasticity: Residuals vs. Fitted Plot
+plot(best_model, which = 1)
+
+# Normality: Histogram and Q-Q Plot
+hist(residuals)
+qqnorm(residuals)
+qqline(residuals)
+shapiro.test(residuals)
 ```
 
-# Comments on assumption checks...
+Independence
+The Durbin-Watson test did not find strong evidence of serial correlation. This suggests that the independence assumption is likely met.
+
+Homoscedasticity
+The residuals vs. fitted plot indicates a possibility of mild heteroscedasticity. This means that the variance of the residuals may not be constant across all fitted values.
+
+Normality
+The normal QQ plot and Shapiro-Wilk test show that the residuals are not normally distributed. This is a violation of the normality assumption.
+
+Influential Observations
+The residuals vs. leverage plot does not support the presence of high leverage or influential observations. This suggests that the influence of individual data points on the model is not a major concern.
 
 ## g. Result
 Give the output of the best model and write down the result. (2-3 sentences)
 
 ```{r}
-# Model result code...
+# Model result...
+summary(best_model)
 ```
-
-# Your result comment...
+A low F-statistic and p-value indicate that the model has at least one independent variable that significantly predicts salary. In this model, the p-value is 2.2e-16, which is less than 0.05. This suggests that the model is statistically significant.
 
 ## h. Conclusion (4p)
-You got your result in item f. Write down the conclusion of your result, in such a way that, the reader who doesn’t know any statistics can understand your findings. (2-3 sentences)
-
-# Your conclusion...
-```
-Please note that you need to replace placeholder texts with your actual content, formulas, hypotheses, and R code where appropriate. The above format assumes you've installed R and required packages for your analysis.
+This model considers various factors to predict salary. Experience, position level, office location, and programming language knowledge are significant factors that affect salary. However, the model may have some limitations. The "city" and "company_size" variables may not be statistically significant and could affect the overall explanatory power of the model.
